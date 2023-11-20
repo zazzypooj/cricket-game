@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Game</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bat Ball Stump Game</h1>
+    
+    <button onclick="
+    generateComputerChoice();
+        
+        let resultMsg;
+        if (computerChoice === 'BALL') {
+            resultMsg = 'You won';
+        } else if (computerChoice === 'BAT') {
+            resultMsg = 'It\'s a tie';
+        } else if (computerChoice === 'STUMP') {
+            resultMsg = 'Computer has won';
+        }
+
+        alert(`You have chosen Bat. Computer chose ${computerChoice} and ${resultMsg}`);
+    ">BAT</button>
+
+    <button onclick="
+       generateComputerChoice();
+        
+    
+        if (computerChoice === 'BALL') {
+            resultMsg = 'You won';
+        } else if (computerChoice === 'BAT') {
+            resultMsg = 'It\'s a tie';
+        } else if (computerChoice === 'STUMP') {
+            resultMsg = 'Computer has won';
+        }
+
+        alert(`You have chosen Ball. Computer chose ${computerChoice} and ${resultMsg}`);
+    ">BALL</button>
+
+    <button onclick="
+       generateComputerChoice();
+        if (computerChoice === 'BALL') {
+            resultMsg = 'You won';
+        } else if (computerChoice === 'BAT') {
+            resultMsg = 'It\'s a tie';
+        } else if (computerChoice === 'STUMP') {
+            resultMsg = 'Computer has won';
+        }
+
+        alert(`You have chosen Stump. Computer chose ${computerChoice} and ${resultMsg}`);
+    ">STUMP</button>
+    <script>
+let computerChoice;
+function generateComputerChoice(){
+    let randomNumber = Math.random() * 3;
+       
+       if (randomNumber > 0 && randomNumber <= 1) {
+           computerChoice = 'BAT';
+       } else if (randomNumber > 1 && randomNumber <= 2) {
+           computerChoice = 'BALL';
+       } else {
+           computerChoice = 'STUMP';
+       }
+}
+    </script>
+</body>
+</html>
